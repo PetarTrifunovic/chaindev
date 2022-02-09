@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <!--Google Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Swipe-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+  </head>
+
+  <body>
+    <!--Header-->
+    <header class="header">
+      <!--Navbar-->
+      <div class="navbar">
+        <div class="row">
+          <figure class="logo">
+            <img src="img/chaindev_logo.svg" alt="Chaindev" class="logo__img">
+          </figure>
+
+          <!--Hamburger Menu-->
+          <div class="hamburger-menu">
+            <div class="hamburger-menu__line hamburger-menu__line--1"></div>
+            <div class="hamburger-menu__line hamburger-menu__line--2"></div>
+            <div class="hamburger-menu__line hamburger-menu__line--3"></div>
+          </div>
+
+          <div class="overlay">&nbsp;</div>
+          
+          <!--Navigation-->
+          <ul class="nav">
+            <img class="logo__mobile" src="img/chaindev_symbol.svg" alt="Chaindev">
+            <a class="nav__link" href="#"><li class="nav__item">Home</li></a>
+            <a class="nav__link" href="#"><li class="nav__item">About</li></a>
+            <a class="nav__link" href="#"><li class="nav__item">Blog</li></a>
+            <a class="nav__link" href="#"><li class="nav__item">Projects</li></a>
+            <a class="nav__link" href="#"><li class="nav__item">Contact</li></a>
+
+            <!--Social-->
+            <div class="social social--mobile">
+              <a class="social__link" href="#">
+                <svg class="social__icon">
+                  <use xlink:href="img/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+              <a class="social__link" href="#">
+                <svg class="social__icon">
+                  <use xlink:href="img/sprite.svg#discord"></use>
+                </svg>
+              </a>
+              <a class="social__link" href="#">
+                <svg class="social__icon">
+                  <use xlink:href="img/sprite.svg#telegram"></use>
+                </svg>
+              </a>
+            </div>
+          </ul>
+        </div>
+      </div>
+
+      <!--Header Elements-->
+      <div class="header__elements" id="sticky">
+        <h1 class="heading-primary">Let’s make your product and team a success</h1>
+        <p class="paragraph">Donec mattis urna et neque rhoncus dapibus. Morbi luctus elementum arcu, et sodales nisl lobortis in. Donec sed nulla in libero eleifend fringilla. In rutrum, tortor cursus iaculis porttitor, arcu odio dignissim lacus.</p>
+        <a class="btn btn--primary" href="#">Button Primary</a>
+        <a class="btn btn--secondary" href="#">Button Secondary</a>
+      </div>
+
+      <div class="header__move-btn">
+        <svg class="header__move-btn-icon">
+          <use xlink:href="img/sprite.svg#chevron-down"></use>
+        </svg>
+      </div>
+    </header>
+
+    <!--Features-->
+    <section class="section-features">
+      <div class="row">
+        <h2 class="heading-secondary mb-hg">Heading Secondary</h2>
+        
+        <div class="feature-container">
+          <div class="feature">
+            <svg class="feature__icon">
+              <use xlink:href="img/sprite.svg#database"></use>
+            </svg>
+            <h3 class="heading-tertiary">Smart Contracts</h3>
+            <p class="paragraph">Pellentesque lobortis sem at orci aliquet accumsan, a sagittis aliquet sodales magna pulvinar porta consectetur sapien tellus est</p>
+            <a class="default-link" href="#">
+              Default link
+              <svg class="default-link__icon">
+                <use xlink:href="img/sprite.svg#chevron-circle-right"></use>
+              </svg>
+            </a>
+          </div>
+  
+          <div class="feature">
+            <svg class="feature__icon">
+              <use xlink:href="img/sprite.svg#code"></use>
+            </svg>
+            <h3 class="heading-tertiary">DeFi <span class="heading-tertiary--sub">Decentralized Finance</span></h3>
+            <p class="paragraph">Fusce lacinia, dui eu aliquet sodales, diam odio efficitur ipsum, nec fringilla nunc sem a tellus libero interdum venenatis laoreet.</p>
+            <a class="default-link" href="#">
+              Default link
+              <svg class="default-link__icon">
+                <use xlink:href="img/sprite.svg#chevron-circle-right"></use>
+              </svg>
+            </a>
+          </div>
+  
+          <div class="feature">
+            <svg class="feature__icon">
+              <use xlink:href="img/sprite.svg#browser"></use>
+            </svg>
+            <h3 class="heading-tertiary">DAOs <span class="heading-tertiary--sub">Decentralized Autonomous Organizations</span></h3>
+            <p class="paragraph">Morbi quis semper ligula. Morbi mi velit, auctor ut eleifend vitae, placerat accumsan urna. Nulla sem nisl, ornare eu leo sed.</p>
+            <a class="default-link" href="#">
+              Default link
+              <svg class="default-link__icon">
+                <use xlink:href="img/sprite.svg#chevron-circle-right"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Blog-->
+    <section class="section-blog">
+      <div class="row">
+        <h2 class="heading-secondary">Blog Post Highlight</h2>
+        <p class="paragraph mb-hg">Aliquam vitae vulputate mauris. Suspendisse eget lectus ornare diam gravida rhoncus.</p>
+
+        <div class="latest-posts">
+          <!--Post-->
+          <div class="post">
+            <a class="post__category" href="#">Category</a>
+
+            <figure class="post__img-container">
+              <img class="post__img" src="../img/news_1.jpg" alt="News Img 1">
+            </figure>
+            
+            <div class="post__details">
+              <a class="post__link" href="#"><h2 class="post__title">Nam urna ligula vel gravida nisl id ligula mollis</h2></a>
+              <div class="post__info">
+                <span class="post__author">
+                  <svg class="post__info-icon">
+                    <use xlink:href="img/sprite.svg#profile"></use>
+                  </svg>
+                  Name Lastname
+                </span>
+                <span class="post__date">
+                  <svg class="post__info-icon">
+                    <use xlink:href="img/sprite.svg#clock"></use>
+                  </svg>
+                  June 26, 2021
+                </span>
+              </div>
+              <p class="paragraph">Phasellus laoreet dolor interdum magna placerat, ac tempor ligula mollis. Nullam efficitur aliquam tortor quis porta. Nulla sem nisl, ornare eu leo sed...</p>
+            </div>
+          </div>
+
+          <!--Post-->
+          <div class="post">
+            <a class="post__category" href="#">Category</a>
+
+            <figure class="post__img-container">
+              <img class="post__img" src="../img/news_2.jpg" alt="News Img 2">
+            </figure>
+
+            <div class="post__details">
+              <a class="post__link" href="#"><h2 class="post__title">Nam urna ligula vel gravida nisl id ligula mollis</h2></a>
+              <div class="post__info">
+                <span class="post__author">
+                  <svg class="post__info-icon">
+                    <use xlink:href="img/sprite.svg#profile"></use>
+                  </svg>
+                  Name Lastname
+                </span>
+                <span class="post__date">
+                  <svg class="post__info-icon">
+                    <use xlink:href="img/sprite.svg#clock"></use>
+                  </svg>
+                  June 26, 2021
+                </span>
+              </div>
+              <p class="paragraph">Phasellus laoreet dolor interdum magna placerat, ac tempor ligula mollis. Nullam efficitur aliquam tortor quis porta. Nulla sem nisl, ornare eu leo sed...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Partners-->
+    <section class="section-partners">
+      <div class="row">
+
+        <h2 class="heading-secondary">Our Partners</h2>
+        <p class="paragraph mb-hg">Suspendisse ut pharetra nunc. Donec suscipit facilisis neque, non ullamcorper urna faucibus a. Maecenas in ligula bibendum, accumsan elit vitae, rhoncus purus.</p>
+        
+        <!-- Slider main container -->
+        <div class="swiper slider">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper slider__wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide slider__slide">
+              <img class="slider__img" src="img/partner.png" alt="Partner">
+            </div>
+            <div class="swiper-slide slider__slide">
+              <img class="slider__img" src="img/partner.png" alt="Partner">
+            </div>
+            <div class="swiper-slide slider__slide">
+              <img class="slider__img" src="img/partner.png" alt="Partner">
+            </div>
+            <div class="swiper-slide slider__slide">
+              <img class="slider__img" src="img/partner.png" alt="Partner">
+            </div>
+            <div class="swiper-slide slider__slide">
+              <img class="slider__img" src="img/partner.png" alt="Partner">
+            </div>
+            <div class="swiper-slide slider__slide">
+              <img class="slider__img" src="img/partner.png" alt="Partner">
+            </div>
+            <div class="swiper-slide slider__slide">
+              <img class="slider__img" src="img/partner.png" alt="Partner">
+            </div>
+          </div>
+
+          <!--Slider Pagination-->
+          <div class="swiper-pagination slider__pagination"></div>
+        </div>
+      </div>
+    </section>
+    
+    <!--Jumbotron-->
+    <div class="jumbotron">
+      <div class="row">
+        <h4 class="heading-4">What does success look like for your project?</h4>
+        <a class="btn btn--tertiary" href="#">Button Tertiary</a>
+      </div>
+    </div>
+
+    <!--Footer-->
+    <footer class="footer">
+      <div class="row">
+        <figure class="logo">
+          <img src="img/chaindev_symbol.svg" alt="Chaindev" class="logo__img">
+        </figure>
+
+        <!--Newsletter Form-->
+        <form action="#" class="newsletter-form">
+          <div class="newsletter-form__group">
+              <input type="email" class="newsletter-form__input" placeholder="Email address" id="email" required>
+              <label for="email" class="newsletter-form__label">Email address</label>
+              <button class="newsletter-form__btn">
+                  Subscribe
+              </button>
+          </div>
+        </form>
+
+        <!--Nav-->
+        <ul class="nav">
+          <img class="logo__mobile" src="img/chaindev_symbol.svg" alt="Chaindev">
+          <a class="nav__link" href="#"><li class="nav__item">Home</li></a>
+          <a class="nav__link" href="#"><li class="nav__item">About</li></a>
+          <a class="nav__link" href="#"><li class="nav__item">Blog</li></a>
+          <a class="nav__link" href="#"><li class="nav__item">Projects</li></a>
+          <a class="nav__link" href="#"><li class="nav__item">Contact</li></a>
+        </ul>
+
+        <!--Social-->
+        <div class="social">
+          <a class="social__link" href="#">
+            <svg class="social__icon">
+              <use xlink:href="img/sprite.svg#twitter"></use>
+            </svg>
+          </a>
+          <a class="social__link" href="#">
+            <svg class="social__icon">
+              <use xlink:href="img/sprite.svg#discord"></use>
+            </svg>
+          </a>
+          <a class="social__link" href="#">
+            <svg class="social__icon">
+              <use xlink:href="img/sprite.svg#telegram"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

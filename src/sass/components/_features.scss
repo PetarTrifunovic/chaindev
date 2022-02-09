@@ -1,0 +1,54 @@
+.feature-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
+
+  @include respond(tab-port) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond(phone-big) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &:nth-child(3) {
+    @include respond(tab-port) {
+      grid-column: 1 / span 2;
+      margin-top: 3rem;
+    }
+
+    @include respond(phone-big) {
+      grid-column: auto;
+      margin-top: 0;
+    }
+  }
+
+  &:not(:last-child) {
+    @include respond(phone-big) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__icon {
+    width: 8rem;
+    height: 8rem;
+    color: $color-primary-1;
+    margin-bottom: 3rem;
+    transition: 0.2s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .heading-tertiary {
+    height: 6rem;
+  }
+}

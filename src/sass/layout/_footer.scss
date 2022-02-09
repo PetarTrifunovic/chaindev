@@ -1,0 +1,32 @@
+%default {
+  padding: 12rem 0;
+  text-align: center;
+
+  @include respond(tab-land-big) {
+    padding: 12rem 3rem;
+  }
+
+  @include respond(phone-big) {
+    padding: 12rem 1rem;
+  }
+}
+
+.footer {
+  @extend %default;
+  background-color: $color-grey-dark-2;
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo__img {
+    height: 8rem;
+    margin-bottom: 4rem;
+  }
+
+  .nav {
+    margin-bottom: 2rem;
+  }
+}
