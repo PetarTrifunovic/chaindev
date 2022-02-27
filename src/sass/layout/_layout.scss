@@ -1,0 +1,124 @@
+%default {
+  padding: 3rem 0 0;
+  text-align: center;
+
+  @include respond(tab-land-big) {
+    padding: 3rem 1rem 0;
+  }
+}
+
+.section {
+  @extend %default;
+
+  &:first-child {
+    padding-top: 6rem;
+  }
+
+  &__equity {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 3rem;
+
+    @include respond(tab-port-big) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond(phone-big) {
+      grid-template-columns: 1fr;
+    }
+
+    .card:nth-child(1) {
+      grid-column: 1 / span 3;
+
+      @include respond(tab-port-big) {
+        grid-column: initial;
+      }
+    }
+  }
+
+  &__cards,
+  &__cards-secondary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 3rem;
+
+    @include respond(tab-land) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include respond(tab-port-big) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond(phone-big) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__positions {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 3rem;
+
+    div {
+      text-align: left;
+    }
+
+    @include respond(tab-port-big) {
+      overflow-x: scroll;
+    }
+
+    // Scrollbar
+    &::-webkit-scrollbar {
+      height: 0.5rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      background-color: $color-grey-dark-1;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-primary;
+      outline: none;
+    }
+  }
+
+  &__trent-leader {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-gap: 3rem;
+
+    .card {
+      &:first-child {
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+      }
+
+      &:nth-child(3) {
+        @include respond(tab-port) {
+          grid-column: 1 / span 2;
+          grid-row: 2 / span 2;
+        }
+      }
+
+      &:nth-child(2) {
+        @include respond(tab-port) {
+          grid-column: 1 / span 2;
+          grid-row: 4 / span 2;
+        }
+      }
+
+      &:nth-child(4) {
+        @include respond(tab-port) {
+          grid-column: 1 / span 2;
+          grid-row: 6 / span 2;
+        }
+      }
+    }
+
+    @include respond(tab-port) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

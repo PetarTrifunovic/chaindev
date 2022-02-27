@@ -1,0 +1,45 @@
+.chart-header {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.chart-header__item {
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-right: 2rem;
+  }
+
+  &--balance,
+  &--equity {
+    &:before {
+      content: '';
+      padding: 0 2.5rem;
+      margin-right: 0.5rem;
+    }
+  }
+
+  &--balance {
+    &:before {
+      background-color: $color-primary;
+      height: 1.2rem;
+    }
+  }
+
+  &--equity {
+    &:before {
+      background-color: $color-primary-dark;
+      height: 1.2rem;
+    }
+  }
+}
+
+.chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 20rem;
+}

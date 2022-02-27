@@ -1,0 +1,84 @@
+// Popup
+.popup {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 9999999;
+  transform: translate(-50%, -50%);
+  box-shadow: $box-shadow;
+  max-width: 60rem;
+
+  .card {
+    max-height: 80vh;
+    overflow: hidden;
+    overflow-y: scroll;
+
+    // Scrollbar
+    &::-webkit-scrollbar {
+      width: 0.5rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      background-color: $color-grey-dark-2;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-primary;
+      outline: none;
+    }
+  }
+
+  @include respond(tab-port-big) {
+    width: 90%;
+  }
+
+  &__overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba($color-grey-dark-2, 0.8);
+    position: fixed;
+    z-index: -1;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+    .heading-secondary {
+      @include respond(phone-big) {
+        font-size: $default-font-size;
+      }
+
+      @include respond(phone-small) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &__close {
+    color: $color-grey-light-1;
+    font-size: 2.4rem;
+    cursor: pointer;
+  }
+
+  &__copy,
+  &__stop-following,
+  &__follow {
+    visibility: none;
+    opacity: 0;
+    display: none;
+    transition: 0.2s ease;
+  }
+
+  &__visible {
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+  }
+}

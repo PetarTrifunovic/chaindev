@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <!--Google Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--FontAwesome-->
+    <script
+      src="https://kit.fontawesome.com/02999118ab.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!--Navbar-->
+    <div class="navbar">
+      <div class="row">
+        <figure class="logo">
+          <img src="img/fpfx_tech.png" alt="FPFX Tech" class="logo__img" />
+        </figure>
+
+        <!--Hamburger Menu-->
+        <div class="hamburger-menu">
+          <div class="hamburger-menu__line hamburger-menu__line--1"></div>
+          <div class="hamburger-menu__line hamburger-menu__line--2"></div>
+          <div class="hamburger-menu__line hamburger-menu__line--3"></div>
+        </div>
+
+        <div class="overlay">&nbsp;</div>
+
+        <!--Navigation-->
+        <ul class="nav">
+          <div class="nav__container">
+            <a class="nav__link" href="#"
+              ><li class="nav__item">Strategies List</li></a
+            >
+            <a class="nav__link" href="#"
+              ><li class="nav__item">Strategies Followed</li></a
+            >
+          </div>
+
+          <!--Navside-->
+          <div class="nav__side">
+            <div class="nav__side-id">TrentHoerr - 23923137</div>
+            <button class="btn btn--default">Log Out</button>
+          </div>
+        </ul>
+      </div>
+    </div>
+
+    <main class="main" id="sticky">
+      <div class="row">
+        <!--Section Trent Leader-->
+        <section class="section section__trent-leader">
+          <div class="card">
+            <div class="trent-leader">
+              <div class="trent-leader__header">
+                <h2 class="heading-secondary">
+                  Trent <span>2090094926</span> Leader
+                </h2>
+                <a class="btn-back" href="#">
+                  <i class="fa-solid fa-chevron-left btn-back__icon"></i>
+                  Back to strategies
+                </a>
+              </div>
+
+              <div class="trent-leader__bottom">
+                <div class="trent-leader__bottom-item">
+                  <span class="trent-leader__bottom-item-text">
+                    Return:
+                    <strong>20%</strong>
+                  </span>
+                </div>
+                <div class="trent-leader__bottom-item">
+                  <span class="trent-leader__bottom-item-text">
+                    Days Since Inceptions:
+                    <strong>999</strong>
+                  </span>
+                </div>
+                <div class="trent-leader__bottom-item">
+                  <span class="trent-leader__bottom-item-text">
+                    Followers:
+                    <strong>10 505</strong>
+                  </span>
+                </div>
+                <div class="trent-leader__bottom-item">
+                  <button class="btn btn--primary">Copy</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="trent-sidebar">
+              <div class="trent-sidebar__item">
+                <span class="trent-sidebar__item--strong">$100,713</span>
+                Current Balance
+              </div>
+              <div class="trent-sidebar__item">
+                <span class="trent-sidebar__item--strong">$99,649</span>
+                Current Equity
+              </div>
+              <div class="trent-sidebar__item">
+                <span class="trent-sidebar__item--strong">-$519</span>
+                Profit & Loss
+              </div>
+              <div class="trent-sidebar__item">
+                <span class="trent-sidebar__item--strong">$482</span>
+                Highwater Mark
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="chart-container chart-container--big">
+              <div class="chart-header">
+                <div class="chart-header__item chart-header__item--balance">
+                  Balance
+                </div>
+                <div class="chart-header__item chart-header__item--equity">
+                  Equity
+                </div>
+              </div>
+              <div class="chart">Chart Goes Here</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="trent-sidebar">
+              <div class="trent-sidebar__item">
+                <span class="trent-sidebar__item--strong">-1.06%</span>
+                Weekly Performance
+              </div>
+              <div class="trent-sidebar__item">
+                <span class="trent-sidebar__item--strong">1.06%</span>
+                Monthly Performance
+              </div>
+              <div class="trent-sidebar__item">
+                <span class="trent-sidebar__item--strong">-0.52%</span>
+                Lifetime Performance
+              </div>
+              <div class="trent-sidebar__item">
+                <span class="trent-sidebar__item--strong">581.31%</span>
+                Maximum Drawdown
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!--Footer-->
+    <footer class="footer">
+      <div class="row">
+        <!--Footer Top-->
+        <div class="footer__top">
+          <div class="footer__main">
+            <div>
+              <h3 class="heading-tertiary">About Us</h3>
+              <a
+                href="https://www.eightcap.com/en/about/who-we-are/"
+                class="footer__link"
+                target="_blank"
+              >
+                Who We Are
+              </a>
+              <a
+                href="https://www.eightcap.com/en/about/legal-policies/"
+                class="footer__link"
+                target="_blank"
+              >
+                Legal Documents
+              </a>
+              <a
+                href="https://www.eightcap.com/en/compare-our-offering/"
+                class="footer__link"
+                target="_blank"
+              >
+                Compare Our Offering
+              </a>
+              <a
+                href="https://www.eightcap.com/en/about/sponsorship/"
+                class="footer__link"
+                target="_blank"
+              >
+                Sponsorships
+              </a>
+            </div>
+            <div>
+              <h3 class="heading-tertiary">Trading Instruments</h3>
+              <a
+                href="https://www.eightcap.com/en/trading/instruments/forex/"
+                class="footer__link"
+                target="_blank"
+              >
+                Forex
+              </a>
+              <a
+                href="https://www.eightcap.com/en/trading/instruments/commodities-trading/"
+                class="footer__link"
+                target="_blank"
+              >
+                Commodities
+              </a>
+              <a
+                href="https://www.eightcap.com/en/trading/instruments/indices/"
+                class="footer__link"
+                target="_blank"
+              >
+                Indices
+              </a>
+              <a
+                href="https://www.eightcap.com/en/trading/instruments/shares/"
+                class="footer__link"
+                target="_blank"
+              >
+                Shares
+              </a>
+              <a
+                href="https://www.eightcap.com/en/trading/instruments/cryptocurrencies/"
+                class="footer__link"
+                target="_blank"
+              >
+                Cryptocurrencies
+              </a>
+            </div>
+            <div>
+              <h3 class="heading-tertiary">Client Support</h3>
+              <a
+                href="https://www.eightcap.com/en/client-support/funding/"
+                class="footer__link"
+                target="_blank"
+              >
+                Funding
+              </a>
+              <a
+                href="https://www.eightcap.com/en/client-support/withdrawals/"
+                class="footer__link"
+                target="_blank"
+              >
+                Withdrawals
+              </a>
+              <a
+                href="https://www.eightcap.com/en/client-support/faqs/"
+                class="footer__link"
+                target="_blank"
+              >
+                FAQs
+              </a>
+              <a
+                href="https://www.eightcap.com/en/client-support/contact/"
+                class="footer__link"
+                target="_blank"
+              >
+                Contact Us
+              </a>
+            </div>
+            <div>
+              <h3 class="heading-tertiary">Partnerships</h3>
+              <a
+                href="https://www.eightcap.com/en/partnerships/"
+                class="footer__link"
+                target="_blank"
+              >
+                Overview
+              </a>
+              <a
+                href="https://www.eightcap.com/en/partnerships/introducing-broker/"
+                class="footer__link"
+                target="_blank"
+              >
+                Introducing Broker
+              </a>
+              <a
+                href="https://www.eightcap.com/en/partnerships/mam/"
+                class="footer__link"
+                target="_blank"
+              >
+                Money Managers
+              </a>
+              <a
+                href="https://www.eightcap.com/en/partnerships/white-label/"
+                class="footer__link"
+                target="_blank"
+              >
+                White Label
+              </a>
+            </div>
+            <div>
+              <h3 class="heading-tertiary">Trading Accounts</h3>
+              <a
+                href="https://www.eightcap.com/en/account-types/"
+                class="footer__link"
+                target="_blank"
+              >
+                Account Types
+              </a>
+            </div>
+            <div>
+              <h3 class="heading-tertiary">Analysis & Education</h3>
+              <a
+                href="https://www.eightcap.com/en/market-analysis/"
+                class="footer__link"
+                target="_blank"
+              >
+                Analysis Overview
+              </a>
+              <a
+                href="https://www.eightcap.com/en/market-analysis/cfd-news/"
+                class="footer__link"
+                target="_blank"
+              >
+                CFD News
+              </a>
+              <a
+                href="https://www.eightcap.com/en/market-analysis/market-updates/"
+                class="footer__link"
+                target="_blank"
+              >
+                Market Updates
+              </a>
+              <a
+                href="https://www.eightcap.com/en/market-analysis/forex-news/"
+                class="footer__link"
+                target="_blank"
+              >
+                Forex News
+              </a>
+            </div>
+          </div>
+          <div class="footer__contact">
+            <div>
+              <div class="footer__contact-box">
+                <span class="footer__contact-title">Phone</span>
+                <a href="tel:+61385922375" class="footer__link">+61385922375</a>
+                <a href="tel:+67835382" class="footer__link">+67835382</a>
+              </div>
+              <div class="footer__contact-box">
+                <span class="footer__contact-title">Email</span>
+                <a
+                  href="mailto:customerservice@eightcap.com"
+                  class="footer__link"
+                >
+                  customerservice@eightcap.com
+                </a>
+              </div>
+              <div class="footer__contact-box">
+                <span class="footer__contact-title">Office</span>
+                <p class="footer__contact-text">208 Church Street, Sandyport</p>
+                <p class="footer__contact-text">Nassau, The Bahamas</p>
+              </div>
+              <div class="footer__contact-box">
+                <!--Social-->
+                <div class="social">
+                  <a
+                    href="https://www.facebook.com/Eightcapaufx"
+                    class="social__link"
+                    target="_blank"
+                  >
+                    <i class="fa-brands fa-facebook social__icon"></i>
+                  </a>
+                  <a
+                    href="https://twitter.com/Eightcap_aufx"
+                    class="social__link"
+                    target="_blank"
+                  >
+                    <i class="fa-brands fa-twitter social__icon"></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/eight-cap-pty-ltd"
+                    class="social__link"
+                    target="_blank"
+                  >
+                    <i class="fa-brands fa-linkedin social__icon"></i>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/eightcap_aufx/"
+                    class="social__link"
+                    target="_blank"
+                  >
+                    <i class="fa-brands fa-instagram social__icon"></i>
+                  </a>
+                  <a
+                    href="https://www.youtube.com/channel/UCa77H1ycVUAG_M3aToCPk8w"
+                    class="social__link"
+                    target="_blank"
+                  >
+                    <i class="fa-brands fa-youtube social__icon"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Footer Review-->
+        <div class="footer__review">
+          <div class="review-box">
+            <a
+              href="https://www.trustpilot.com/review/eightcap.com?utm_medium=trustbox&utm_source=MiniCarousel"
+              target="_blank"
+            >
+              <img
+                class="review-img"
+                src="img/trustpilot_logo.svg"
+                alt="Trustpilot"
+              />
+            </a>
+            <div class="review">
+              <i class="fa-solid fa-star review--green"></i>
+              <i class="fa-solid fa-star review--green"></i>
+              <i class="fa-solid fa-star review--green"></i>
+              <i class="fa-regular fa-star-half-stroke review--green"></i>
+              <i class="fa-regular fa-star review--green"></i>
+            </div>
+            <div class="review-score">
+              <div>
+                Trust Score: <span class="review-score__value">4.4</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-box">
+            <a
+              href="https://www.google.com/search?ei=3plkX4ShC7-D1fAP2OSnyAY&q=eightcap+australia&oq=eightcap+australia&gs_lcp=CgZwc3ktYWIQAzILCC4QxwEQrwEQkwI6BQgAEJECOggILhDHARCjAjoCCAA6AgguOgUILhCTAjoICC4QxwEQrwE6BAgAEAo6CgguEMcBEK8BEAo6BggAEBYQHlDmIViwPWChPmgAcAB4AIABlgGIAbwSkgEEMi4xOJgBAKABAaoBB2d3cy13aXrAAQE&sclient=psy-ab&ved=0ahUKEwiEiNrmzPLrAhW_QRUIHVjyCWkQ4dUDCA0&uact=5#lrd=0x6ad642cbd902e613:0x10e4a41db31323ec"
+              target="_blank"
+            >
+              <img class="review-img" src="img/google_logo.svg" alt="Google" />
+            </a>
+            <div class="review">
+              <i class="fa-solid fa-star review--yellow"></i>
+              <i class="fa-solid fa-star review--yellow"></i>
+              <i class="fa-solid fa-star review--yellow"></i>
+              <i class="fa-regular fa-star-half-stroke review--yellow"></i>
+              <i class="fa-regular fa-star review--yellow"></i>
+            </div>
+            <div class="review-score">
+              <div>
+                Google Score: <span class="review-score__value">4.4</span>
+              </div>
+              <div>Reviews <span class="review-score__value">77</span></div>
+            </div>
+          </div>
+
+          <div class="review-box review-box--secondary">
+            <img class="review-img" src="img/gfa_logo.png" alt="Trustpilot" />
+            <h2 class="heading-secondary">
+              Eightcap awarded<br />
+              Best MT4 Forex<br />
+              Broker Global 2020
+            </h2>
+          </div>
+        </div>
+
+        <!--Footer Bottom-->
+        <div class="footer__bottom">
+          <p class="footer__contact-text">
+            <strong>Lorem ipsum</strong> dolor sit amet, consectetur adipiscing
+            elit. Aliquam mollis a ligula et eleifend. Interdum et malesuada
+            fames ac ante ipsum primis in faucibus. Cras magna sem, dapibus eu
+            venenatis eu, condimentum sit amet sem. Aliquam erat volutpat.
+            Suspendisse ullamcorper, urna sit amet malesuada eleifend, neque
+            velit posuere massa, eget gravida odio tellus at augue. Nam a risus
+            nibh. Integer euismod tortor eu placerat congue. Aenean accumsan
+            fringilla consectetur. Fusce ut lacinia elit, a malesuada eros. In
+            aliquet quis purus non condimentum. Vestibulum non vehicula nunc.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

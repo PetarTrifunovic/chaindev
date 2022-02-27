@@ -27,11 +27,11 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: $color-primary-1;
+  background-color: $color-primary;
   outline: none;
 }
 
 ::selection {
-  background-color: $color-primary-2;
+  background-color: $color-grey-dark-2;
   color: $color-grey-light-1;
 }

@@ -1,21 +1,12 @@
 .logo {
   display: flex;
+  margin-right: 6rem;
 
   &__img {
-    height: 7rem;
+    height: 5rem;
 
     @include respond(tab-port) {
       height: 5rem;
-    }
-  }
-
-  &__mobile {
-    height: 8rem;
-    margin-bottom: 5rem;
-    display: none;
-
-    @include respond(tab-port) {
-      display: block;
     }
   }
 }

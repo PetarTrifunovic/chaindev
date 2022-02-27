@@ -1,0 +1,97 @@
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: $color-grey-dark-1;
+  font-size: 1.4rem;
+
+  th,
+  td {
+    padding: 1.5rem;
+    text-align: left;
+    font-weight: 600;
+    color: $color-grey-light-1;
+
+    @include respond(tab-port-big) {
+      min-width: 16rem;
+    }
+  }
+
+  th {
+    font-weight: 600;
+  }
+
+  td {
+    font-weight: 300;
+  }
+
+  tr {
+    font-weight: 300;
+    transition: 0.2s ease;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba($color-grey-light-1, 0.1);
+    }
+  }
+
+  tr:hover {
+    background-color: rgba($color-grey-light-1, 0.025);
+  }
+
+  &__symbol {
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  &__type {
+    padding: 0.3rem 1rem;
+    border-radius: 30rem;
+
+    &--buy {
+      border: 2px solid $color-primary;
+      color: $color-primary;
+      font-weight: 400;
+    }
+
+    &--sell {
+      border: 2px solid$color-red;
+      color: $color-red;
+      font-weight: 400;
+    }
+  }
+
+  &__follower-status {
+    padding: 0.3rem 1rem;
+    border-radius: 30rem;
+
+    &--followed {
+      border: 2px solid $color-primary;
+      color: $color-primary;
+      font-weight: 400;
+    }
+
+    &--not-followed {
+      border: 2px solid$color-red;
+      color: $color-red;
+      font-weight: 400;
+    }
+  }
+
+  &__btn {
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    background-color: $color-primary;
+    color: $color-grey-dark-2;
+    border: none;
+    border-radius: 0.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s ease;
+
+    &:hover {
+      background-color: $color-primary-dark;
+    }
+  }
+}

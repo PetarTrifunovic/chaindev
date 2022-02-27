@@ -69,9 +69,9 @@ module.exports = {
   //plugins
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Chaindev',
+      title: 'FPFX Tech',
       filename: 'index.html',
-      template: path.resolve(__dirname, 'src/temp.html'),
+      template: path.resolve(__dirname, 'src/strategies-followed.html'),
     }),
   ],
 };

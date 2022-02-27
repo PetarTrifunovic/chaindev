@@ -8,112 +8,26 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.heading-primary {
-  font-size: 5.5rem;
-  font-weight: 700;
-  display: inline-block;
-  color: $color-grey-light-1;
-  line-height: 1.1;
-
-  @include respond(phone-big) {
-    font-size: 3.4rem;
-  }
-
-  @include respond(phone-small) {
-    font-size: 2.8rem;
-  }
-
-  &:not(:last-child) {
-    margin-bottom: 3rem;
-  }
-}
-
 .heading-secondary {
-  font-size: 3.4rem;
+  font-size: 2rem;
   font-weight: 600;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-  display: inline-block;
-  position: relative;
-  z-index: 1;
-
-  @include respond(phone-big) {
-    font-size: 2.8rem;
-  }
-
-  @include respond(phone-small) {
-    font-size: 2.2rem;
-  }
-
-  &::before {
-    content: '';
-    height: 1.2rem;
-    background-color: $color-primary-1;
-    width: 100%;
-    left: -2rem;
-    position: absolute;
-    z-index: -1;
-    bottom: 1rem;
-
-    @include respond(phone-big) {
-      bottom: 0.7rem;
-    }
-
-    @include respond(phone-small) {
-      bottom: 0.4rem;
-    }
-  }
-
-  &::after {
-    content: '';
-    height: 1.2rem;
-    background-color: $color-primary-1;
-    width: 100%;
-    right: -2rem;
-    position: absolute;
-    z-index: -1;
-    bottom: 1rem;
-
-    @include respond(phone-big) {
-      bottom: 0.7rem;
-    }
-
-    @include respond(phone-small) {
-      bottom: 0.4rem;
-    }
-  }
 }
 
 .heading-tertiary {
-  font-size: 2.6rem;
+  font-size: 1.8rem;
   font-weight: 500;
-  margin-bottom: 1.5rem;
-
-  @include respond(phone-small) {
-    font-size: 2rem;
-    line-height: 1.4;
-  }
-
-  &--sub {
-    display: block;
-    font-size: 1.2rem;
-    font-weight: 500;
-  }
+  color: $color-grey-light-1;
 }
 
 .heading-4 {
-  font-size: 3.2rem;
-  font-weight: 600;
-  line-height: 1.1;
-
-  @include respond(phone-small) {
-    font-size: 2.6rem;
-  }
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: $color-grey-light-2;
 }
 
 .paragraph {
   font-size: $default-font-size;
-  color: $color-grey-light-2;
+  color: $color-grey-light-1;
 
   @include respond(phone-small) {
     font-size: 1.6rem;

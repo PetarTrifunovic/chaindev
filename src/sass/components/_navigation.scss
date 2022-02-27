@@ -1,6 +1,55 @@
+// Navbar
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  border-bottom: 1px solid rgba($color-grey-light-1, 0.1);
+  width: 100%;
+  margin: 0 auto;
+
+  @include respond(tab-port) {
+    padding: 1.5rem 1rem;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__sticky {
+    position: fixed;
+    z-index: 99999;
+    background-color: rgba($color-grey-dark-1, 0.9);
+    width: 100%;
+    box-shadow: $box-shadow;
+    border-bottom: 1px solid rgba($color-grey-light-1, 0.05);
+  }
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($color-grey-dark-1, 0.7);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+// Navigation
 .nav {
   list-style: none;
   display: flex;
+  flex: 1;
+  justify-content: space-between;
   height: 100%;
 
   @include respond(tab-port) {
@@ -11,16 +60,24 @@
     z-index: 99999999999;
     flex-direction: column;
     align-items: flex-end;
-    background-image: linear-gradient(
-      to bottom,
-      rgba($color-primary-1, 0.95),
-      rgba($color-primary-2, 0.95)
-    );
+    justify-content: flex-start;
+    background-color: $color-grey-dark-1;
+    border-right: 1px solid rgba($color-grey-light-1, 0.1);
     padding: 2rem 3rem;
     position: fixed;
     height: 100vh;
     transform: translateX(-100rem);
-    transition: 0.5s ease;
+    transition: 0.3s ease;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      align-items: flex-end;
+    }
   }
 
   &__link {
@@ -28,6 +85,7 @@
     color: $color-grey-light-1;
     font-size: 1.8rem;
     font-weight: 600;
+    transition: 0.2s ease;
 
     &:not(:last-child) {
       margin-right: 2rem;
@@ -36,12 +94,31 @@
         margin-right: 0;
       }
     }
+
+    &--active {
+      color: $color-primary;
+    }
+
+    &--active .nav__item::before {
+      content: '';
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background-color: $color-primary;
+      bottom: 0;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
   }
 
   &__item {
     display: flex;
     align-items: center;
-    height: 5rem;
+    height: 8rem;
     position: relative;
 
     &::before {
@@ -49,7 +126,7 @@
       position: absolute;
       height: 3px;
       width: 100%;
-      background-color: $color-grey-light-1;
+      background-color: $color-primary;
       bottom: -0.5rem;
       opacity: 0;
       visibility: hidden;
@@ -62,14 +139,39 @@
       opacity: 1;
       visibility: visible;
     }
+
+    @include respond(tab-port) {
+      height: 5rem;
+    }
   }
 
   &__active {
     transform: translateX(0);
   }
+
+  &__side {
+    display: flex;
+    align-items: center;
+
+    @include respond(tab-port) {
+      margin-top: 6rem;
+      align-items: flex-end;
+      flex-direction: column;
+    }
+  }
+
+  &__side-id {
+    color: $color-grey-light-2;
+    margin-right: 3rem;
+    font-size: 1.4rem;
+
+    @include respond(tab-port) {
+      margin: 0 0 1.5rem 0;
+    }
+  }
 }
 
-//Hamburger Menu
+// Hamburger Menu
 .hamburger-menu {
   width: 3rem;
   height: 3rem;

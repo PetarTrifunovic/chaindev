@@ -1,0 +1,88 @@
+.card {
+  padding: 1.5rem;
+  background-color: $color-grey-dark-1;
+  border-radius: 0.5rem;
+  box-shadow: $box-shadow;
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: $default-font-size;
+    font-weight: 600;
+  }
+
+  &__follow-btn-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: 'Follow';
+      font-size: 1.2rem;
+      color: $color-grey-light-2;
+      background-color: $color-grey-dark-2;
+      padding: 0.3rem 1rem;
+      border-radius: 0.3rem;
+      position: relative;
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.2s ease;
+      margin-right: 0.5rem;
+      transform: translateX(-1.5rem);
+    }
+  }
+
+  &__follow-btn-container:hover.card__follow-btn-container {
+    &::before {
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  &__follow-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    background-color: rgba($color-grey-light-1, 0.1);
+    cursor: pointer;
+  }
+
+  &__chart-container {
+    min-height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  &__list {
+    margin: 1.5rem 0;
+    font-size: 1.4rem;
+    border-top: 1px solid rgba($color-grey-light-1, 0.1);
+    border-bottom: 1px solid rgba($color-grey-light-1, 0.1);
+  }
+
+  &__list-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba($color-grey-light-1, 0.1);
+    }
+
+    span {
+      color: $color-grey-light-2;
+    }
+  }
+
+  &__bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+}

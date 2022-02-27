@@ -1,6 +1,6 @@
 'use strict';
 
-//Sticky Nav
+// Sticky Nav
 const sticky = document.getElementById('sticky');
 const navbar = document.querySelector('.navbar');
 

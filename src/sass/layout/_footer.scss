@@ -1,32 +1,113 @@
-%default {
-  padding: 12rem 0;
-  text-align: center;
-
-  @include respond(tab-land-big) {
-    padding: 12rem 3rem;
-  }
-
-  @include respond(phone-big) {
-    padding: 12rem 1rem;
-  }
-}
-
+// Footer
 .footer {
-  @extend %default;
-  background-color: $color-grey-dark-2;
+  margin-top: 6rem;
+  padding: 6rem 3rem;
+  background-color: $color-grey-dark-1;
 
-  .row {
+  &__link {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: $color-grey-light-2;
+    width: max-content;
+    transition: 0.2s ease;
+
+    &:hover {
+      color: $color-grey-light-1;
+    }
+  }
+
+  &__top {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 3rem;
+    margin-bottom: 6rem;
+
+    @include respond(phone-big) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+    border-right: 1px solid rgba($color-grey-light-1, 0.1);
+
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include respond(tab-port) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond(phone-big) {
+      border-right: none;
+    }
+
+    @include respond(phone-small) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__contact {
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
 
-  .logo__img {
-    height: 8rem;
-    margin-bottom: 4rem;
+  &__contact-box {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
   }
 
-  .nav {
-    margin-bottom: 2rem;
+  &__contact-title {
+    display: block;
+    color: $color-primary;
+  }
+
+  &__contact-text {
+    color: $color-grey-light-2;
+    font-size: 1.4rem;
+  }
+
+  &__review {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 6rem;
+
+    .review-box {
+      &:not(:last-child) {
+        border-right: 1px solid rgba($color-grey-light-1, 0.1);
+
+        @include respond(tab-port) {
+          border-right: none;
+        }
+      }
+
+      &:first-child {
+        border-right: 1px solid rgba($color-grey-light-1, 0.1);
+
+        @include respond(phone-big) {
+          border-right: none;
+        }
+      }
+    }
+
+    @include respond(tab-port) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond(phone-big) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid rgba($color-grey-light-1, 0.1);
+    padding-top: 6rem;
   }
 }

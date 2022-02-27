@@ -1,7 +1,7 @@
 {
-  "name": "chaindev",
+  "name": "fpfxtech",
   "version": "1.0.0",
-  "description": "Chaindev Project",
+  "description": "FPFX Tech Project",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
@@ -22,6 +22,5 @@
     "webpack": "^5.49.0",
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2"
-  },
-  "dependencies": {}
+  }
 }
